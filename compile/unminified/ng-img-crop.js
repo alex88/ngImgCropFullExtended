@@ -3969,7 +3969,7 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function ($time
             return ColorThief;
         }); // for AMD loader
     } else if (typeof exports === 'object') {
-        module.exports = ColorThief; // for CommonJS
+        exports.ColorThief = ColorThief; // for CommonJS
     } else {
         this.ColorThief = ColorThief;
     }
