@@ -2346,7 +2346,8 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                         0,
                         ris.w,
                         ris.h);
-                } else {
+                
+              else {
                     var aspectRatio = areaWidth / areaHeight;
                     var resultHeight, resultWidth;
 
@@ -2357,6 +2358,10 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                         resultHeight = ris.h;
                         resultWidth = resultHeight * aspectRatio;
                     }
+
+                    // modified 
+                    temp_canvas.width = resultWidth;
+                    temp_canvas.height = resultHeight;
 
                     temp_ctx.drawImage(image,
                         x,
@@ -2374,6 +2379,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                 } else {
                     retObj.dataURI = temp_canvas.toDataURL(resImgFormat);
                 }
+
             }
             return retObj;
         };
