@@ -2347,7 +2347,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
                         ris.w,
                         ris.h);
                 
-              else {
+                } else {
                     var aspectRatio = areaWidth / areaHeight;
                     var resultHeight, resultWidth;
 
